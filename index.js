@@ -6,7 +6,10 @@ const router = require("./main");
 
 app.use(express.static("public"));
 app.use("/" ,router  );
+app.use("/home" ,router  );
 app.use("/books" ,router  );
+app.use("/books/:id" ,router  );
+app.use("/booksList" ,router  );
 app.use("/book" ,router  );
 app.use("/search_books" ,router  );
 app.use((req, res, next) => {
